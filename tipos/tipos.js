@@ -16,3 +16,10 @@ minhaIdade = 28;
 console.log(typeof minhaIdade);
 // minhaIdade = "28";
 console.log(typeof minhaIdade);
+// Array
+let atividades = ["Modelagem", "Passear", "Viajar", "Namorar", "Malhar"];
+console.log(atividades[4]);
+console.log(typeof atividades);
+atividades = [100, 200, 300];
+// atividades = 100;
+console.log(atividades);
