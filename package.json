@@ -1,0 +1,23 @@
+{
+  "name": "entendendo-typescript",
+  "version": "1.0.0",
+  "description": "## Descrição Não limite o uso de TypeScript para Angular! Aprenda essa linguagem, seus recursos, fluxos de trabalho e como usá-la!.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel-Fonseca-da-Silva/Entendendo-TypeScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daniel-Fonseca-da-Silva/Entendendo-TypeScript/issues"
+  },
+  "homepage": "https://github.com/Daniel-Fonseca-da-Silva/Entendendo-TypeScript#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
