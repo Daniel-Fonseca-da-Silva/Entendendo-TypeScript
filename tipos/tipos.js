@@ -10,3 +10,9 @@ console.log(idade);
 let habilidades = false;
 // habilidades = 1;
 console.log(habilidades);
+// Tipos explícitos
+let minhaIdade;
+minhaIdade = 28;
+console.log(typeof minhaIdade);
+// minhaIdade = "28";
+console.log(typeof minhaIdade);
