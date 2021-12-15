@@ -30,3 +30,11 @@ console.log(typeof atividades);
 atividades = [100, 200, 300];
 // atividades = 100;
 console.log(atividades);
+
+// Tuplas
+let endereco: [string, number, string] = ["Av principal", 117, ""];
+console.log(endereco);
+
+endereco = ["Centro", 1993, "Aranha céu New York"];
+
+console.log(endereco);
