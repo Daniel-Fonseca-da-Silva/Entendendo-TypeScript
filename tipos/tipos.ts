@@ -54,3 +54,9 @@ let meuEstado: Estado = Estado.mg;
 console.log(meuEstado);
 
 console.log(Estado.bh);
+
+// Anny 
+let carro: any = 'Ford'
+console.log(carro);
+carro = { marca: 'Ford', ano: 1978 } 
+console.log(carro);
