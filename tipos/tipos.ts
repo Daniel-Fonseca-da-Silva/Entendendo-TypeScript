@@ -55,8 +55,29 @@ console.log(meuEstado);
 
 console.log(Estado.bh);
 
-// Anny 
-let carro: any = 'Ford'
+// Anny
+let carro: any = "Ford";
 console.log(carro);
-carro = { marca: 'Ford', ano: 1978 } 
+carro = { marca: "Ford", ano: 1978 };
 console.log(carro);
+
+// Funcões
+function retornaUmNome(): string {
+  return nome;
+  // return minhaIdade;
+}
+
+console.log(retornaUmNome());
+
+function semRetorno(): void {
+  console.log("Sem retorno ~.~");
+  // return nome;
+}
+
+semRetorno();
+
+function multiplicar(numA: number, numB: number): number {
+  return numA * numB;
+}
+
+console.log(multiplicar(2, 25));
