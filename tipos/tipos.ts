@@ -81,3 +81,9 @@ function multiplicar(numA: number, numB: number): number {
 }
 
 console.log(multiplicar(2, 25));
+
+// Tipo função
+let calculo: (x: number, y: number) => number;
+
+calculo = multiplicar;
+console.log(calculo(50, 50));
