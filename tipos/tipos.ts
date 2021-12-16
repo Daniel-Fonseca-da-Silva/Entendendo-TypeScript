@@ -38,3 +38,19 @@ console.log(endereco);
 endereco = ["Centro", 1993, "Aranha céu New York"];
 
 console.log(endereco);
+
+// enums
+enum Estado {
+  mg, // 0
+  es, // 1
+  sp, // 2
+  rj = 100, // 100
+  bh = 4, // 4
+  am, // 5
+  sc, // 6
+}
+
+let meuEstado: Estado = Estado.mg;
+console.log(meuEstado);
+
+console.log(Estado.bh);
