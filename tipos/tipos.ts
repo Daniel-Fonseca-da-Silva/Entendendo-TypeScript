@@ -87,3 +87,24 @@ let calculo: (x: number, y: number) => number;
 
 calculo = multiplicar;
 console.log(calculo(50, 50));
+
+// Objetos
+let usuario: { nome: string, idade: number } = {
+  nome: 'Daniel',
+  idade: 28
+}
+
+console.log(usuario);
+console.log(typeof usuario);
+// usuario = {}
+
+// usuario = {
+//   name: 'Nikolai',
+//   idade: 18
+// }
+
+usuario = {
+  nome: 'Nikolai',
+  idade: 18
+}
+console.log(usuario);
