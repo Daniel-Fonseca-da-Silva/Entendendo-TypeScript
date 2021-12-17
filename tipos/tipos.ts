@@ -108,3 +108,19 @@ usuario = {
   idade: 18
 }
 console.log(usuario);
+
+let funcionario: {
+  supervisores: string[],
+  baterPonto: (horas: number) => string 
+} = {
+  supervisores: ['Nikolai', 'Daniel', 'Irina'],
+  baterPonto(horario: number): string {
+
+    return horario == 8 ? 'Ponto normal' : 'Fora do horário';
+  }
+}
+
+console.log(funcionario.supervisores);
+console.log(funcionario.baterPonto(8));
+console.log(funcionario.baterPonto(9));
+console.log(typeof funcionario.baterPonto(9));
