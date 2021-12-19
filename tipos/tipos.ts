@@ -131,3 +131,15 @@ let ano: number | string = 2022;
 console.log(`O ano atual é ${ano}`);
 ano = '2022';
 console.log(`O ano atual é ${ano}`);
+
+// Checando tipos
+let valor = 28;
+// valor = false;
+
+// // JavaScript
+// if(typeof valor === "number") {
+//   console.log("É number");
+// } else {
+//   console.log(typeof valor);
+  
+// }
