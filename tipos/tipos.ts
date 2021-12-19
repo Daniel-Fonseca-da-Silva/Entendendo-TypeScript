@@ -191,4 +191,31 @@ console.log(podeSerNulo);
 podeSerNulo = 'algo';
 console.log(podeSerNulo);
 
+// Desafio JS para TS
+type ContaBancaria = {
+  saldo: number,
+  depositar: (valor: number) => void;
+}
+
+let contaBancaria: ContaBancaria = {
+  saldo: 150189,
+  depositar(valor: number) {
+    this.saldo += valor;
+  }
+}
+
+type Correntista = {
+  nome: string,
+  contaBancaria: ContaBancaria,
+  contatos: string[] | number[]; 
+}
+
+let correntista: Correntista = {
+  nome: 'Daniel',
+  contaBancaria: contaBancaria,
+  contatos: ['9845215512', '9434327935'] 
+}
+
+correntista.contaBancaria.depositar(20000);
+console.log(correntista);
 
