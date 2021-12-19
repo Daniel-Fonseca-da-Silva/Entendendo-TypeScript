@@ -125,3 +125,9 @@ let funcionario: Funcionario =  {
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(8));
 console.log(funcionario.baterPonto(9));
+
+// Union types
+let ano: number | string = 2022;
+console.log(`O ano atual é ${ano}`);
+ano = '2022';
+console.log(`O ano atual é ${ano}`);
