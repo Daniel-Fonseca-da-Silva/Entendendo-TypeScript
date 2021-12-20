@@ -68,8 +68,8 @@ calculo = multiplicar;
 console.log(calculo(50, 50));
 // Objetos
 let usuario = {
-    nome: 'Daniel',
-    idade: 28
+    nome: "Daniel",
+    idade: 28,
 };
 console.log(usuario);
 console.log(typeof usuario);
@@ -79,15 +79,15 @@ console.log(typeof usuario);
 //   idade: 18
 // }
 usuario = {
-    nome: 'Nikolai',
-    idade: 18
+    nome: "Nikolai",
+    idade: 18,
 };
 console.log(usuario);
 let funcionario = {
-    supervisores: ['Daniel', 'Nikolai'],
+    supervisores: ["Daniel", "Nikolai"],
     baterPonto(horas) {
-        return horas == 8 ? 'Ponto normal' : 'Fora do horário';
-    }
+        return horas == 8 ? "Ponto normal" : "Fora do horário";
+    },
 };
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(8));
@@ -95,7 +95,7 @@ console.log(funcionario.baterPonto(9));
 // Union types
 let ano = 2022;
 console.log(`O ano atual é ${ano}`);
-ano = '2022';
+ano = "2022";
 console.log(`O ano atual é ${ano}`);
 // Checando tipos
 let valor = 28;
@@ -111,16 +111,16 @@ function falha(msg) {
     throw new Error(msg);
 }
 const produto = {
-    nome: 'Vinho',
+    nome: "Vinho",
     preco: 1,
     validarProduto() {
         if (!this.nome || this.nome.trim().length == 0) {
-            falha('Precisa ter um nome');
+            falha("Precisa ter um nome");
         }
         if (this.preco <= 0) {
-            falha('Preço inválido');
+            falha("Preço inválido");
         }
-    }
+    },
 };
 produto.validarProduto();
 // Valores opcionais
@@ -131,24 +131,25 @@ alturaOpcional = null;
 const contato1 = {
     nome: "Daniel",
     idade: 28,
-    telefone: null
+    telefone: null,
 };
 console.log(contato1);
 let podeSerNulo = null; // any!
 podeSerNulo = 1;
 console.log(podeSerNulo);
-podeSerNulo = 'algo';
+podeSerNulo = "algo";
 console.log(podeSerNulo);
 let contaBancaria = {
     saldo: 150189,
     depositar(valor) {
         this.saldo += valor;
-    }
+    },
 };
 let correntista = {
-    nome: 'Daniel',
+    nome: "Daniel",
     contaBancaria: contaBancaria,
-    contatos: ['9845215512', '9434327935']
+    contatos: ["9845215512", "9434327935"],
 };
 correntista.contaBancaria.depositar(20000);
 console.log(correntista);
+//# sourceMappingURL=tipos.js.map

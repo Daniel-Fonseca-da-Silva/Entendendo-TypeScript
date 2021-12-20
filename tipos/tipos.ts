@@ -89,10 +89,10 @@ calculo = multiplicar;
 console.log(calculo(50, 50));
 
 // Objetos
-let usuario: { nome: string, idade: number } = {
-  nome: 'Daniel',
-  idade: 28
-}
+let usuario: { nome: string; idade: number } = {
+  nome: "Daniel",
+  idade: 28,
+};
 
 console.log(usuario);
 console.log(typeof usuario);
@@ -104,23 +104,24 @@ console.log(typeof usuario);
 // }
 
 usuario = {
-  nome: 'Nikolai',
-  idade: 18
-}
+  nome: "Nikolai",
+  idade: 18,
+};
 
 console.log(usuario);
 
 // Alias
 type Funcionario = {
-  supervisores: string[],
-  baterPonto: (horas: number) => string }
+  supervisores: string[];
+  baterPonto: (horas: number) => string;
+};
 
-let funcionario: Funcionario =  {
-  supervisores: ['Daniel', 'Nikolai'],
+let funcionario: Funcionario = {
+  supervisores: ["Daniel", "Nikolai"],
   baterPonto(horas: number): string {
-    return horas == 8 ? 'Ponto normal' : 'Fora do horário';
-  }
-}
+    return horas == 8 ? "Ponto normal" : "Fora do horário";
+  },
+};
 
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(8));
@@ -129,7 +130,7 @@ console.log(funcionario.baterPonto(9));
 // Union types
 let ano: number | string = 2022;
 console.log(`O ano atual é ${ano}`);
-ano = '2022';
+ano = "2022";
 console.log(`O ano atual é ${ano}`);
 
 // Checando tipos
@@ -141,7 +142,7 @@ let valor = 28;
 //   console.log("É number");
 // } else {
 //   console.log(typeof valor);
-  
+
 // }
 
 // Never
@@ -150,19 +151,19 @@ function falha(msg: string): never {
 }
 
 const produto = {
-  nome: 'Vinho',
+  nome: "Vinho",
   preco: 1,
   validarProduto() {
-    if(!this.nome || this.nome.trim().length == 0) {
-      falha('Precisa ter um nome')
+    if (!this.nome || this.nome.trim().length == 0) {
+      falha("Precisa ter um nome");
     }
-    if(this.preco <= 0) {
-      falha('Preço inválido');
+    if (this.preco <= 0) {
+      falha("Preço inválido");
     }
-  }
-}
+  },
+};
 
-produto.validarProduto()
+produto.validarProduto();
 
 // Valores opcionais
 let altura = 90;
@@ -175,47 +176,46 @@ type Contato = {
   nome: string;
   idade: number;
   telefone: number | null;
-}
+};
 
 const contato1: Contato = {
   nome: "Daniel",
   idade: 28,
-  telefone: null
-}
+  telefone: null,
+};
 
 console.log(contato1);
 
 let podeSerNulo = null; // any!
 podeSerNulo = 1;
 console.log(podeSerNulo);
-podeSerNulo = 'algo';
+podeSerNulo = "algo";
 console.log(podeSerNulo);
 
 // Desafio JS para TS
 type ContaBancaria = {
-  saldo: number,
+  saldo: number;
   depositar: (valor: number) => void;
-}
+};
 
 let contaBancaria: ContaBancaria = {
   saldo: 150189,
   depositar(valor: number) {
     this.saldo += valor;
-  }
-}
+  },
+};
 
 type Correntista = {
-  nome: string,
-  contaBancaria: ContaBancaria,
-  contatos: string[] | number[]; 
-}
+  nome: string;
+  contaBancaria: ContaBancaria;
+  contatos: string[] | number[];
+};
 
 let correntista: Correntista = {
-  nome: 'Daniel',
+  nome: "Daniel",
   contaBancaria: contaBancaria,
-  contatos: ['9845215512', '9434327935'] 
-}
+  contatos: ["9845215512", "9434327935"],
+};
 
 correntista.contaBancaria.depositar(20000);
 console.log(correntista);
-

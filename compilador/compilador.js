@@ -4,3 +4,4 @@ let inscritos = 65012;
 // canal = inscritos;
 console.log(`canal = ${canal}`);
 // let nome: string = 'Erick';
+//# sourceMappingURL=compilador.js.map
