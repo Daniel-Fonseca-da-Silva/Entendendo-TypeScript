@@ -1,5 +1,5 @@
 "use strict";
-const veiculos = [
+const veiculosMap = [
     { id: 1, nome: 'El Camino', cor: 'preto', motor: 'v6', ano: 1965 },
     { id: 2, nome: 'Ford Capri', cor: 'laranja', motor: 'v6', ano: 1975 },
     { id: 3, nome: 'Galaxie', cor: 'azul', motor: 'v8', ano: 1969 },
@@ -21,9 +21,9 @@ const veiculos = [
     { id: 19, nome: 'Hyundai Nexo', cor: 'marrom', motor: 'hidrogenio', ano: 2019 },
     { id: 20, nome: 'BMW i Hydrogen NEXT', cor: 'branco', motor: 'hidrogenio', ano: 2021 },
 ];
-let ids = veiculos.map(veiculos => veiculos.id);
+let ids = veiculosMap.map(veiculosMap => veiculosMap.id);
 console.log(ids);
-let anos = veiculos.map(veiculos => veiculos.ano);
+let anos = veiculosMap.map(veiculosMap => veiculosMap.ano);
 console.log(anos);
 const numeros = [1, 2, 3, 4, 5];
 const duplicacao = numeros.map(x => x + 1);
