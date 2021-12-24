@@ -10,4 +10,21 @@ if (estaFrio) {
 const cpf = "000.000.000-00";
 // cpf = "111.111.111-11";
 console.log(cpf);
+var segredo = "Externo";
+function revelar() {
+    const segredo = "Interno";
+    console.log(segredo);
+}
+revelar();
+console.log(segredo);
+{
+    {
+        const def = "def";
+        console.log(def);
+    }
+}
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+// console.log(i);
 //# sourceMappingURL=ecmascript.js.map
