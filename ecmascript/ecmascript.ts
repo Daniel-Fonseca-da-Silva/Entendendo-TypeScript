@@ -32,3 +32,23 @@ for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 // console.log(i);
+
+// Arrow Function
+const somar = function (n1: number, n2: number): number {
+  return n1 + n2;
+};
+
+console.log(somar(3, 5));
+console.log(somar(2, 50));
+
+/*
+Arrow function
+  remova palavra function
+  subtistua '{}' chaves e return por '=>' flecha
+*/
+// const subtrair = function (n1: number, n2: number) { n1 - n2 };
+const subtrair = (n1: number, n2: number) => n1 - n2; 
+console.log(subtrair(10, 5));
+const somarArrow = (val1: number, val2: number) => val1 + val2;
+console.log(somarArrow(25, 25));
+
