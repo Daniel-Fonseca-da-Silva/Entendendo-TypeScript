@@ -43,4 +43,19 @@ const subtrair = (n1, n2) => n1 - n2;
 console.log(subtrair(10, 5));
 const somarArrow = (val1, val2) => val1 + val2;
 console.log(somarArrow(25, 25));
+const saudacao = () => console.log("Olá!");
+saudacao();
+const falarCom = (pessoa) => console.log("Olá " + pessoa);
+falarCom("João");
+// This
+// function normalComThis() {
+//   console.log(this);
+// }
+// normalComThis();
+// const normalComThisEspecial = normalComThis.bind({ nome: "Nikolai" });
+// normalComThisEspecial();
+// // Quem é o this????
+// console.log(this);
+// const arrowComThis = () => console.log(this);
+// arrowComThis();
 //# sourceMappingURL=ecmascript.js.map
