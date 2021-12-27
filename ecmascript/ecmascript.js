@@ -83,4 +83,10 @@ const turmaB = [
 ];
 console.log(turmaA);
 console.log(turmaB);
+function retornaArray(...args) {
+    return args;
+}
+const numeross = retornaArray(1, 2, 4, 5, 64, 1024);
+console.log(numeross);
+console.log(retornaArray(...numbers));
 //# sourceMappingURL=ecmascript.js.map

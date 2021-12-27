@@ -105,3 +105,11 @@ const turmaB: string[] = [
 
 console.log(turmaA);
 console.log(turmaB);
+
+function retornaArray(...args: number[]): number[] {
+  return args;
+}
+
+const numeross = retornaArray(1, 2, 4, 5, 64, 1024);
+console.log(numeross);
+console.log(retornaArray(...numbers));
