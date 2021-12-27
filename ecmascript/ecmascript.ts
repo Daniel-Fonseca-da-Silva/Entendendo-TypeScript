@@ -128,3 +128,13 @@ function tuplaParam2(...params: [number, string, boolean]) {
 }
 
 tuplaParam2(...tupla);
+
+// Destructuring (array)
+const caracteristicas = ["Teclado Husky Blue Sky Dragon", 2022, 459];
+// const marca = caracteristicas[0];
+// const anoo = caracteristicas[1];
+// const preco = caracteristicas[2];
+const [marca, anoo, preco] = caracteristicas;
+console.log(marca);
+console.log(anoo);
+console.log(preco);

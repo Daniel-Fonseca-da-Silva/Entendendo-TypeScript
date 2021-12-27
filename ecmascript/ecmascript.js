@@ -100,4 +100,13 @@ function tuplaParam2(...params) {
     console.log(`2 ${params[0]} ${params[1]} ${params[2]}`);
 }
 tuplaParam2(...tupla);
+// Destructuring (array)
+const caracteristicas = ["Teclado Husky Blue Sky Dragon", 2022, 459];
+// const marca = caracteristicas[0];
+// const anoo = caracteristicas[1];
+// const preco = caracteristicas[2];
+const [marca, anoo, preco] = caracteristicas;
+console.log(marca);
+console.log(anoo);
+console.log(preco);
 //# sourceMappingURL=ecmascript.js.map
