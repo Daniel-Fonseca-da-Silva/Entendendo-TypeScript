@@ -69,4 +69,18 @@ function contagemRegressiva(inicio = 5, fim = inicio - 5) {
 }
 contagemRegressiva();
 contagemRegressiva(3);
+// Rest & Spread
+const numbers = [1, 10, 99, -5, 1024];
+// console.log(Math.max(numbers[0], numbers[1], numbers[2], numbers[3]));
+console.log(Math.max(...numbers));
+const turmaA = ["Daniel", "Nikolai", "Irina", "Josh"];
+const turmaB = [
+    "Pedro",
+    "Kenzo Sato",
+    ...turmaA,
+    "Liu lee",
+    "Enzo Garcia",
+];
+console.log(turmaA);
+console.log(turmaB);
 //# sourceMappingURL=ecmascript.js.map
