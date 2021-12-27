@@ -109,4 +109,26 @@ const [marca, anoo, preco] = caracteristicas;
 console.log(marca);
 console.log(anoo);
 console.log(preco);
+// Destructuring (array)
+const produtom = {
+    nome: "Mouse Husky Black Hole",
+    preco: 89,
+    conexao: "wireless",
+    origem: {
+        br: "nacional",
+        ch: "internactional",
+    },
+};
+const nomeProdutom = produtom.nome;
+const precoProdutom = produtom.preco;
+const conexaoProdutom = produtom.conexao;
+console.log(nomeProdutom);
+console.log(precoProdutom);
+console.log(precoProdutom);
+// Apelido para atributos!
+const { nome: n, preco: p, conexao: cn, origem: { br }, } = produtom;
+console.log(n);
+console.log(p);
+console.log(cn);
+console.log(br);
 //# sourceMappingURL=ecmascript.js.map
