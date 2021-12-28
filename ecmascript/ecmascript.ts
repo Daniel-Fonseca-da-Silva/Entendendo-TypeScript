@@ -168,3 +168,14 @@ console.log(n);
 console.log(p);
 console.log(cn);
 console.log(br);
+
+const usuarioId: string = "suporteEmpresa";
+const notificacoes: string = "19";
+// const boasVindas =
+//   "Boas vindas " + usuarioId + " notificações: " + notificacoes;
+const boasVindas = `Boas vindas ${usuarioId}, 
+Notificações: ${parseInt(notificacoes) > 9 ? "+9" : notificacoes}
+`;
+console.log(boasVindas);
+console.log(`${1 + 1}`);
+console.log(`Nome: ${produtom.nome}`);
