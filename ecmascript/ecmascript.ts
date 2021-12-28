@@ -179,3 +179,32 @@ Notificações: ${parseInt(notificacoes) > 9 ? "+9" : notificacoes}
 console.log(boasVindas);
 console.log(`${1 + 1}`);
 console.log(`Nome: ${produtom.nome}`);
+
+// Callback
+// function espera3s(callback: (dado: string) => void) {
+//   setTimeout(() => {
+//     callback("3 segundos depois");
+//   }, 3000);
+// }
+// espera3s(function (resultado: string) {
+//   console.log(resultado);
+// });
+
+// // Promise
+// function espera3sPromise() {
+//   return new Promise((resolve: any) => {
+//     setTimeout(() => {
+//       resolve("3 segundos depois Promise!");
+//     }, 3000);
+//   });
+// }
+
+// espera3sPromise().then((dado) => console.log(dado));
+
+fetch("https://swapi.dev/api/people/1")
+  .then((res) => res.json())
+  .then((personagem) => personagem.films)
+  .then((films) => fetch(films[0]))
+  .then((resFilm) => resFilm.json())
+  .then((filme) => console.log(filme.title))
+  .catch((err) => console.log("catch!!!!" + err.message));
