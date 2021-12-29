@@ -38,12 +38,19 @@ class Produto {
         this.preco = preco;
         this.desconto = desconto;
     }
+    // Também é public
+    precoComDesconto() {
+        return this.preco * (1 - this.desconto);
+    }
     resumo() {
-        return `${this.nome} custa R$ ${this.preco} (${this.desconto * 100}% off)`;
+        return `${this.nome} custa R$ ${this.precoComDesconto()} (${this.desconto * 100}% off)`;
     }
 }
 const monitor1 = new Produto("Monitor AOC 24 gamer", 959.85);
 const monitor2 = new Produto("Monitor LG 24", 939.95, 0.5);
 console.log(monitor1.resumo());
 console.log(monitor2.resumo());
+// Criar um método precoComDesconto
+// Quais são os parâmetros e o retorno?
+// Alterar método resumo para mostrar o preço com desconto
 //# sourceMappingURL=classes.js.map
