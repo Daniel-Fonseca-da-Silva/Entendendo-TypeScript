@@ -27,4 +27,20 @@ console.log(aniversarioEsperto);
 const casamentoEsperto = new DataEsperta(); // Pode omitir os "()"
 casamentoEsperto.ano = 2022;
 console.log(casamentoEsperto);
+// Desafio Classe Produto
+// Atributos: nome, preco, desconto
+// criar o construtor
+// Obs 1.: Desconto é opcional (valor padrão 0)
+// Obs 2.: Criar dois produtos: passando dois e três parâmetros
+class Produto {
+    constructor(nome, preco, desconto = 0) {
+        this.nome = nome;
+        this.preco = preco;
+        this.desconto = desconto;
+    }
+}
+const monitor1 = new Produto("Monitor AOC 24 gamer", 959.85);
+const monitor2 = new Produto("Monitor LG 24", 939.95, 0.5);
+console.log(monitor1);
+console.log(monitor2);
 //# sourceMappingURL=classes.js.map
