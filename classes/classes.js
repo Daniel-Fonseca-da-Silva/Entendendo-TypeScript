@@ -38,9 +38,12 @@ class Produto {
         this.preco = preco;
         this.desconto = desconto;
     }
+    resumo() {
+        return `${this.nome} custa R$ ${this.preco} (${this.desconto * 100}% off)`;
+    }
 }
 const monitor1 = new Produto("Monitor AOC 24 gamer", 959.85);
 const monitor2 = new Produto("Monitor LG 24", 939.95, 0.5);
-console.log(monitor1);
-console.log(monitor2);
+console.log(monitor1.resumo());
+console.log(monitor2.resumo());
 //# sourceMappingURL=classes.js.map
