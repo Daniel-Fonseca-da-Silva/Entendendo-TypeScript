@@ -125,4 +125,16 @@ pessoa1.idade = 10;
 console.log(pessoa1);
 pessoa1.idade - 3;
 console.log(pessoa1.idade);
+// Atributos e métodos estáticos
+class Calculo {
+    static areaCirc(raio) {
+        return this.PI * raio * raio;
+    }
+}
+Calculo.PI = 3.1416;
+// const calc1 = new Calculo();
+// calc1.PI = 4.2;
+// console.log(calc1.areaCirc(4));
+console.log(Calculo.areaCirc(4));
+// console.log(new Calculo().areaCirc(4));
 //# sourceMappingURL=classes.js.map
