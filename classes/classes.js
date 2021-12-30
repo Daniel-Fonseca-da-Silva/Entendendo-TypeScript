@@ -90,6 +90,9 @@ Array(100)
     .forEach(() => carro1.frear());
 console.log(carro1.frear());
 class jeep extends Carro {
+    constructor(modelo, velocidadeMaxma) {
+        super("Lada", modelo, velocidadeMaxma);
+    }
     acelerar() {
         return this.alterarVelocidade(15);
     }
@@ -97,7 +100,7 @@ class jeep extends Carro {
         return this.alterarVelocidade(-10);
     }
 }
-const niva = new jeep("Lada", "Niva 4x4", 165);
+const niva = new jeep("Niva 4x4", 165);
 console.log(`Marca: ${niva.marca}, modelo: ${niva.modelo}`);
 console.log(niva.acelerar());
 console.log(niva.acelerar());
