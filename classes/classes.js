@@ -89,4 +89,18 @@ Array(100)
     .fill(0)
     .forEach(() => carro1.frear());
 console.log(carro1.frear());
+class jeep extends Carro {
+    acelerar() {
+        return this.alterarVelocidade(15);
+    }
+    frear() {
+        return this.alterarVelocidade(-10);
+    }
+}
+const niva = new jeep("Lada", "Niva 4x4", 165);
+console.log(`Marca: ${niva.marca}, modelo: ${niva.modelo}`);
+console.log(niva.acelerar());
+console.log(niva.acelerar());
+console.log(niva.acelerar());
+console.log(niva.frear());
 //# sourceMappingURL=classes.js.map

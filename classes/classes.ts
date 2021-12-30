@@ -79,7 +79,7 @@ class Carro {
     private velocidadeMaxima: number = 200
   ) {}
 
-  private alterarVelocidade(delta: number): number {
+  protected alterarVelocidade(delta: number): number {
     const novaVelocidade = this.velocidadeAtual + delta;
     const velocidadeValida =
       novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
@@ -114,3 +114,20 @@ Array(100)
   .fill(0)
   .forEach(() => carro1.frear());
 console.log(carro1.frear());
+
+class jeep extends Carro {
+  public acelerar(): number {
+    return this.alterarVelocidade(15);
+  }
+
+  public frear(): number {
+    return this.alterarVelocidade(-10);
+  }
+}
+
+const niva = new jeep("Lada", "Niva 4x4", 165);
+console.log(`Marca: ${niva.marca}, modelo: ${niva.modelo}`);
+console.log(niva.acelerar());
+console.log(niva.acelerar());
+console.log(niva.acelerar());
+console.log(niva.frear());
