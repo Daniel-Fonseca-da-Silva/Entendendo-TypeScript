@@ -126,15 +126,40 @@ console.log(pessoa1);
 pessoa1.idade - 3;
 console.log(pessoa1.idade);
 // Atributos e métodos estáticos
-class Calculo {
+class Calc {
     static areaCirc(raio) {
         return this.PI * raio * raio;
     }
 }
-Calculo.PI = 3.1416;
-// const calc1 = new Calculo();
+Calc.PI = 3.1416;
+// const calc1 = new Calc();
 // calc1.PI = 4.2;
 // console.log(calc1.areaCirc(4));
-console.log(Calculo.areaCirc(4));
-// console.log(new Calculo().areaCirc(4));
+console.log(Calc.areaCirc(4));
+// console.log(new Calc().areaCirc(4));
+// Classe abstrata
+class Calculo {
+    constructor() {
+        this.resultado = 0;
+    }
+    getResultado() {
+        return this.resultado;
+    }
+}
+class Somar extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t + a);
+    }
+}
+class Multiplicacao extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t * a);
+    }
+}
+let c1 = new Somar();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
+c1 = new Multiplicacao();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
 //# sourceMappingURL=classes.js.map
