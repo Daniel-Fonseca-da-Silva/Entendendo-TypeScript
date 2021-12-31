@@ -219,3 +219,16 @@ class Unico {
 
 // const errado = new Unico;
 console.log(Unico.getInstance().agora());
+
+// Somente leitura
+class Aviao {
+  public readonly modelo: string;
+  constructor(modelo: string, public readonly prefixo: string) {
+    this.modelo = modelo;
+  }
+}
+
+const turboHelice = new Aviao("Boing 777", "BR-045");
+turboHelice.modelo = "Asa Delta";
+turboHelice.prefixo = "Quebrado";
+console.log(turboHelice);
