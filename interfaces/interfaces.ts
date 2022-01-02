@@ -2,6 +2,8 @@ interface Humano {
   nome: string;
   idade?: number; // Parâmetro opcional
   [prop: string]: any; // Parâmetro dinâmico (sem um tipo específico)
+
+  saudar(sobrenome: string): void; // Função (pode se opcional!)
 }
 
 function saudarComOlar(pessoa: Humano) {
@@ -9,14 +11,19 @@ function saudarComOlar(pessoa: Humano) {
 }
 
 function mudarNome(pessoa: Humano) {
-  pessoa.nome = "Nome";
+  pessoa.nome = "Gastrovisk";
 }
 
 const pessoa: Humano = {
   nome: "Nikolai",
+  idade: 18,
+  saudar(sobrenome: string) {
+    console.log(`Olá meu nome é ${this.nome} e meu sobrenome é ${sobrenome}`);
+  },
 };
 
 saudarComOlar(pessoa);
 mudarNome(pessoa);
 saudarComOlar(pessoa);
-saudarComOlar({ nome: "Alguém", idade: 18, peso: 75 });
+// saudarComOlar({ nome: "Alguém", idade: 18, peso: 75 });
+pessoa.saudar("Gasparine");
