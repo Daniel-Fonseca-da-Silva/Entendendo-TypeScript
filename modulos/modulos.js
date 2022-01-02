@@ -10,4 +10,6 @@ const circunferencia_1 = require("./circunferencia");
 console.log("Modulos carregados com sucesso!");
 console.log((0, retangulo_1.default)(7, 8));
 console.log((0, circunferencia_1.areaCircunferencia)(16));
+const { digaOi } = require("./novo");
+console.log(digaOi("Nikolai"));
 //# sourceMappingURL=modulos.js.map
