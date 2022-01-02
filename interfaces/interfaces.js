@@ -7,9 +7,9 @@ function mudarNome(pessoa) {
 }
 const pessoa = {
     nome: "Nikolai",
-    idade: 20,
 };
 saudarComOlar(pessoa);
 mudarNome(pessoa);
 saudarComOlar(pessoa);
+saudarComOlar({ nome: "Alguém", idade: 18, peso: 75 });
 //# sourceMappingURL=interfaces.js.map
