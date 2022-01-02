@@ -1,6 +1,8 @@
-import { areaRetangulo } from "./retangulo";
-import { areaCircunferencia } from "./circunferencia";
+// import { areaRetangulo } from "./retangulo";
+// import { areaCircunferencia } from "./circunferencia";
+import retangulo from "./retangulo";
+import { areaCircunferencia as circ } from "./circunferencia";
 
 console.log("Modulos carregados com sucesso!");
-console.log(areaRetangulo(7, 8));
-console.log(areaCircunferencia(16));
+console.log(retangulo(7, 8));
+console.log(circ(16));
