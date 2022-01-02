@@ -222,8 +222,8 @@ console.log(Unico.getInstance().agora());
 
 // Somente leitura
 class Aviao {
-  public readonly modelo: string;
-  constructor(modelo: string, public readonly prefixo: string) {
+  public modelo: string;
+  constructor(modelo: string, public prefixo: string) {
     this.modelo = modelo;
   }
 }
