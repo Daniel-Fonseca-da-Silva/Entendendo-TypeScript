@@ -32,4 +32,15 @@ meuCliente.nome = "Marcus";
 saudarComOlar(meuCliente);
 meuCliente.saudar("Gaspar");
 console.log(meuCliente.ultimaCompra);
+let potencia;
+potencia = function (base, exp) {
+    // Math.pow(3, 10)
+    // 3 ** 10
+    return Array(exp)
+        .fill(base)
+        .reduce((t, a) => t * a);
+};
+console.log(potencia(2, 8));
+console.log(Math.pow(2, 8));
+console.log(Math.pow(2, 8));
 //# sourceMappingURL=interfaces.js.map

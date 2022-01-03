@@ -44,3 +44,22 @@ meuCliente.nome = "Marcus";
 saudarComOlar(meuCliente);
 meuCliente.saudar("Gaspar");
 console.log(meuCliente.ultimaCompra);
+
+// Interface Função
+interface FuncaoCalculo {
+  (a: number, b: number): number;
+}
+
+let potencia: FuncaoCalculo;
+
+potencia = function (base: number, exp: number): number {
+  // Math.pow(3, 10)
+  // 3 ** 10
+  return Array(exp)
+    .fill(base)
+    .reduce((t, a) => t * a);
+};
+
+console.log(potencia(2, 8));
+console.log(Math.pow(2, 8));
+console.log(2 ** 8);
