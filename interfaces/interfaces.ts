@@ -27,3 +27,20 @@ mudarNome(pessoa);
 saudarComOlar(pessoa);
 // saudarComOlar({ nome: "Alguém", idade: 18, peso: 75 });
 pessoa.saudar("Gasparine");
+
+// Usando classes...
+class Cliente implements Humano {
+  nome: string = "";
+  ultimaCompra: Date = new Date();
+  saudar(sobrenome: string) {
+    console.log(
+      "Olá meu nome é " + this.nome + " e meu sobrenome é " + sobrenome
+    );
+  }
+}
+
+const meuCliente = new Cliente();
+meuCliente.nome = "Marcus";
+saudarComOlar(meuCliente);
+meuCliente.saudar("Gaspar");
+console.log(meuCliente.ultimaCompra);
