@@ -48,16 +48,22 @@ const chamarEcho: echo = echoMelhorado;
 console.log(chamarEcho<string>("Alguma coisa"));
 
 // classe com generics
-class OperacaoBinaria {
-  constructor(public operando1: any, public operando2: any) {}
+abstract class OperacaoBinaria<T, R> {
+  constructor(public operando1: T, public operando2: T) {}
 
-  executar() {
+  abstract executar(): R;
+}
+
+// console.log(new OperacaoBinaria("Bom ", "dia").executar());
+// console.log(new OperacaoBinaria(3, 9).executar());
+// console.log(new OperacaoBinaria(3, 9).executar());
+// console.log(new OperacaoBinaria("17", "28").executar());
+// console.log(new OperacaoBinaria({}, null).executar());
+
+class SomaBinaria extends OperacaoBinaria<number, number> {
+  executar(): number {
     return this.operando1 + this.operando2;
   }
 }
 
-console.log(new OperacaoBinaria("Bom ", "dia").executar());
-console.log(new OperacaoBinaria(3, 9).executar());
-console.log(new OperacaoBinaria(3, 9).executar());
-console.log(new OperacaoBinaria("17", "28").executar());
-console.log(new OperacaoBinaria({}, {}).executar());
+console.log(new SomaBinaria(25, 25).executar());
