@@ -17,4 +17,21 @@ const avaliacoes = [10, 9.5, 4.5];
 avaliacoes.push(8.4);
 // avaliacoes.push('3.5');
 console.log(avaliacoes);
+// Array
+function imprimir(args) {
+    args.forEach((elemento) => console.log(elemento));
+}
+imprimir([5, 3, 8, 12]);
+imprimir([6, 18, 24, 32]);
+imprimir(["3", "6", "12", "24"]);
+imprimir([
+    { nome: "Nikolai", peso: 80 },
+    { nome: "Gasparine", peso: 95 },
+    { nome: "Josh", peso: 75 },
+]);
+imprimir([
+    { nome: "Nikolai", peso: 80 },
+    { nome: "Gasparine", peso: 95 },
+    { nome: "Josh", peso: 75 },
+]);
 //# sourceMappingURL=generics.js.map
