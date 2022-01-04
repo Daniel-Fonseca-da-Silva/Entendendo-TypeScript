@@ -41,3 +41,8 @@ imprimir<funcionarios>([
   { nome: "Gasparine", peso: 95 },
   { nome: "Josh", peso: 75 },
 ]);
+
+// Tipo Genérico
+type echo = <T>(data: T) => T;
+const chamarEcho: echo = echoMelhorado;
+console.log(chamarEcho<string>("Alguma coisa"));

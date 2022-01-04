@@ -34,4 +34,6 @@ imprimir([
     { nome: "Gasparine", peso: 95 },
     { nome: "Josh", peso: 75 },
 ]);
+const chamarEcho = echoMelhorado;
+console.log(chamarEcho("Alguma coisa"));
 //# sourceMappingURL=generics.js.map
