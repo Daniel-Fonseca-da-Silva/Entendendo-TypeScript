@@ -54,4 +54,21 @@ class SomaBinaria extends OperacaoBinaria {
     }
 }
 console.log(new SomaBinaria(25, 25).executar());
+class DiferencaEntreDatas extends OperacaoBinaria {
+    getTime(data) {
+        let { dia, mes, ano } = data;
+        return new Date(`${mes}/${dia}/${ano}`).getTime();
+    }
+    executar() {
+        const t1 = this.getTime(this.operando1);
+        const t2 = this.getTime(this.operando2);
+        const diferenca = Math.abs(t1 - t2);
+        // Um dia em milissegundos
+        const dia = 1000 * 60 * 24;
+        return `${Math.ceil(diferenca / dia)} dia(s)`;
+    }
+}
+const d1 = new Data(1, 2, 2022);
+const d2 = new Data(5, 2, 2022);
+console.log(new DiferencaEntreDatas(d1, d2).executar());
 //# sourceMappingURL=generics.js.map
