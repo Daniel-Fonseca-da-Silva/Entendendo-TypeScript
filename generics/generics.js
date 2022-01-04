@@ -36,4 +36,19 @@ imprimir([
 ]);
 const chamarEcho = echoMelhorado;
 console.log(chamarEcho("Alguma coisa"));
+// classe com generics
+class OperacaoBinaria {
+    constructor(operando1, operando2) {
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+    }
+    executar() {
+        return this.operando1 + this.operando2;
+    }
+}
+console.log(new OperacaoBinaria("Bom ", "dia").executar());
+console.log(new OperacaoBinaria(3, 9).executar());
+console.log(new OperacaoBinaria(3, 9).executar());
+console.log(new OperacaoBinaria("17", "28").executar());
+console.log(new OperacaoBinaria({}, {}).executar());
 //# sourceMappingURL=generics.js.map
