@@ -91,7 +91,7 @@ abstract class OperacaoBinaria<T, R> {
 // Desafio classe fila
 // Attributo: fila (Array)
 // Métodos: entrar, próximo, imprimir
-class Fila<T> {
+class Fila<T extends number | string> {
   private fila: Array<T>;
 
   constructor(...args: T[]) {
@@ -136,3 +136,7 @@ fila.proximo();
 fila.imprimir();
 fila.proximo();
 fila.imprimir();
+
+const filaNumerica = new Fila<number>(4, 8, 12, 24, 48);
+
+filaNumerica.imprimir();

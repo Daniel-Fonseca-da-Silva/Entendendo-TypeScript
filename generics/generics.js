@@ -108,4 +108,6 @@ fila.proximo();
 fila.imprimir();
 fila.proximo();
 fila.imprimir();
+const filaNumerica = new Fila(4, 8, 12, 24, 48);
+filaNumerica.imprimir();
 //# sourceMappingURL=generics.js.map
