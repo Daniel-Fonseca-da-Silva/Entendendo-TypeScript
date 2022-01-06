@@ -5,16 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-// @logarClasse
-// @logarClasseSe(true)
-let Eletrodomestico = class Eletrodomestico {
-    constructor() {
-        console.log("novo!");
-    }
-};
-Eletrodomestico = __decorate([
-    decorator({ a: "algo", b: 17 })
-], Eletrodomestico);
 function logarClasse(construtor) {
     console.log(construtor);
 }
@@ -28,4 +18,27 @@ function decorator(obj) {
         console.log(obj.a + "\n" + obj.b);
     };
 }
+// @logarClasse
+// @logarClasseSe(true)
+// @decorator({ a: "algo", b: 17 })
+let Eletrodomestico = class Eletrodomestico {
+    constructor() {
+        console.log("novo!");
+    }
+};
+Eletrodomestico = __decorate([
+    logarObjeto
+], Eletrodomestico);
+function logarObjeto(construtor) {
+    console.log("Carregando...");
+    return class extends construtor {
+        constructor(...args) {
+            console.log("Antes...");
+            super(...args);
+            console.log("Depois...");
+        }
+    };
+}
+new Eletrodomestico();
+new Eletrodomestico();
 //# sourceMappingURL=decorators.js.map
