@@ -110,4 +110,37 @@ fila.proximo();
 fila.imprimir();
 const filaNumerica = new Fila(4, 8, 12, 24, 48);
 filaNumerica.imprimir();
+class Mapa {
+    constructor() {
+        this.itens = new Array();
+    }
+    obter(chave) {
+        const resultado = this.itens.filter((i) => i.chave === chave);
+        return resultado ? resultado[0] : null;
+    }
+    colocar(par) {
+        const encontrado = this.obter(par.chave);
+        if (encontrado) {
+            encontrado.valor = par.valor;
+        }
+        else {
+            this.itens.push(par);
+        }
+    }
+    limpar() {
+        this.itens = new Array();
+    }
+    imprimir() {
+        console.log(this.itens);
+    }
+}
+const mapa = new Mapa();
+mapa.colocar({ chave: 1, valor: "Nikolai" });
+mapa.colocar({ chave: 2, valor: "Josh" });
+mapa.colocar({ chave: 3, valor: "Gasparine" });
+mapa.colocar({ chave: 1, valor: "Lazarrine" });
+console.log(mapa.obter(2));
+mapa.imprimir();
+mapa.limpar();
+mapa.imprimir();
 //# sourceMappingURL=generics.js.map
