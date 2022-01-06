@@ -36,16 +36,15 @@ function logarObjeto(construtor: Construtor) {
 // new Eletrodomestico();
 // new Eletrodomestico();
 
-// @logarClasse
-// @logarClasseSe(true)
-// @decorator({ a: "algo", b: 17 })
-// @logarObjeto
-
 interface Eletrodomestico {
   imprimir?(): void;
 }
 
-@imprimivel
+// @logarClasse
+// @logarClasseSe(true)
+// @decorator({ a: "algo", b: 17 })
+// @logarObjeto
+// @imprimivel
 class Eletrodomestico {
   constructor() {
     console.log("novo!");
@@ -59,4 +58,6 @@ function imprimivel(construtor: Function) {
 }
 
 const eletro = new Eletrodomestico();
+eletro.imprimir && eletro.imprimir();
+eletro.imprimir && eletro.imprimir();
 eletro.imprimir && eletro.imprimir();
