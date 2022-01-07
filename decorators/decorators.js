@@ -72,4 +72,40 @@ function perfilAdmin(construtor) {
     };
 }
 new MudancaAdministrativa().critico();
+class ContaCorrente {
+    constructor(saldo) {
+        this.saldo = saldo;
+    }
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    getSaldo() {
+        return this.saldo;
+    }
+}
+__decorate([
+    congelar
+], ContaCorrente.prototype, "sacar", null);
+__decorate([
+    congelar
+], ContaCorrente.prototype, "getSaldo", null);
+const conta = new ContaCorrente(1000.86);
+conta.sacar(500.5);
+console.log(conta.getSaldo());
+// conta.getSaldo = function () {
+//   return this["saldo"] + 7000;
+// };
+console.log(conta.getSaldo());
+// Object.freeze
+function congelar(alvo, nomeMetodo, descritor) {
+    console.log(alvo);
+    console.log(nomeMetodo);
+    descritor.writable = false;
+}
 //# sourceMappingURL=decorators.js.map

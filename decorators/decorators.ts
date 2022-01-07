@@ -88,3 +88,46 @@ function perfilAdmin<T extends Construtor>(construtor: T) {
 }
 
 new MudancaAdministrativa().critico();
+
+class ContaCorrente {
+  private saldo: number;
+
+  constructor(saldo: number) {
+    this.saldo = saldo;
+  }
+
+  @congelar
+  sacar(valor: number) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  @congelar
+  getSaldo() {
+    return this.saldo;
+  }
+}
+
+const conta = new ContaCorrente(1000.86);
+conta.sacar(500.5);
+console.log(conta.getSaldo());
+
+// conta.getSaldo = function () {
+//   return this["saldo"] + 7000;
+// };
+console.log(conta.getSaldo());
+
+// Object.freeze
+function congelar(
+  alvo: any,
+  nomeMetodo: string,
+  descritor: PropertyDescriptor
+) {
+  console.log(alvo);
+  console.log(nomeMetodo);
+  descritor.writable = false;
+}
